@@ -8,6 +8,8 @@
 
 #include <sstream>
 
+#include <chrono>
+
 // borrowed from http://anandpandia.blogspot.com.es/2012/08/quicksort-algorithm-and-example-in-c.html
 // (ask for permission!)
 using namespace std;
@@ -72,6 +74,12 @@ int main(int argc, char const *argv[])
             << endl;
         return -1;
     } else {
+  
+        // declara las variables de tiempo //
+        chrono::time_point<chrono::system_clock> start,end;
+        // incia start con el tiempo de inicio //
+        start = chrono::system_clock::now(); 
+
         cout << "big o notation sample" << endl;
 
         // random the c++11 way
@@ -107,6 +115,15 @@ int main(int argc, char const *argv[])
         for (int i:list) {
             cout << i << endl;
         }
+  
+   	// inicializa la variable end con el tiempo de final //
+        end = chrono::system_clock::now();
+        // restamos el tiempo de incio con el de final // 
+        chrono::duration<double> elapsed_seconds = end - start;
+
+        // imprime el tiempo //
+        cout << "time: " << elapsed_seconds.count() << "\n";
+   
         return 0;
     }
 
