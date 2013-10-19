@@ -61,7 +61,8 @@ int main()
         
     // 4. transform every previous exercise to ranged for loops. use as much
     // c++11 syntax as you can
-    // EL FICHERO CON LOS BUCLES SIN UTILIZAR LA SINTASIX DE C++ 11 es el loop_exercises.cpp   
+    // EL FICHERO CON LOS BUCLES SIN UTILIZAR LA SINTASIX DE C++ 11 es el 
+    // loop_exercises.cpp   
  
     // 5. write a for loop that prints a pyramid of height N, like this:    
     //	
@@ -84,16 +85,22 @@ void createPyramid(int n)
 {
     int i;
 
+    // inicia el bucle para recorrer todas las fillas //
     for(int c=0;c<n;c++)
     {
-        for(i=0;i<n-c;i++)
+        // pinta los caracteres en blanco //
+        // que seran el numero de filas menos la fila donde // 
+        // se encuentra el bucle //
+        for(i=0;i<n-c-1;i++)
         {
             cout << " ";
         }
-        for(i=0;i<(c+1)*2;i++)
+        // pinta el doble de * del numero de fila que se encuentra //
+        for(i=0;i<(c+1);i++)
         {
-            cout << "*";
+            cout << "**";
         }
+        // salta a la siguiente fila //
         cout << "\n";
    }
 }
