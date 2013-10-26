@@ -3,7 +3,7 @@
 all: loop loopC11
 
 loop: loop_exercises.cpp 
-	g++ -lm -std=c++11 -fpermissive $< -o $@
+	g++ -lm -fpermissive $< -o $@
 
 loopC11: loop_exercisesc11.cpp
 	g++ -lm -std=c++11 -fpermissive $< -o $@

@@ -81,6 +81,11 @@ int main()
     createPyramid(10);
 }
 
+/**
+ Resolucion al ejercicion 5 de loop_exercises
+ @brief funcion encargade de contruir una piramide
+ @param el tamanio de la piramide a contruir
+**/
 void createPyramid(int n)
 {
     int i;
@@ -105,6 +110,12 @@ void createPyramid(int n)
    }
 }
 
+/**
+ * Resolucion del ejercicio 3.1 de loop_exercices
+ * @brief camvia el valor del mapa pasado por referencia redondeando su float
+ * y cambiando la cadena por otra
+ * @param mapa de tipo map<string, float> que sera modificado
+**/
 void convertMap2(map<string, float> &mapa1)
 {
     // recorre el mapa con un bucle estili c++ 11 //
@@ -117,6 +128,12 @@ void convertMap2(map<string, float> &mapa1)
     }
 }
 
+/** 
+ * Resolucion del ejercicio 3.1 de loop_exercices
+ * @brief Copia un mapa pasado como parametro y cambuia sus tipos a 
+ * cadena de carateres y enteros
+ * @param mapa de tipo map<string, float> que sera copiado
+**/
 map<char*, int> convertMap(map<string, float> mapa1)
 {
     // declara e inicia el mapa a devolver //
@@ -142,7 +159,11 @@ map<char*, int> convertMap(map<string, float> mapa1)
     return mapa2;
 }
 
-
+/** 
+ * Resolucion del ejercicio 2 de loop_exercices
+ * @brief rellena un Vecor con valores y lo recorre con un iterados mostrandolo por
+ * pantalla
+**/ 
 void loopString()
 {
     // crea el vecor inicializandolo a 5 strings //
@@ -159,6 +180,10 @@ void loopString()
 
 }
 
+/**
+ * Resolucion del ejercicio 1 de loop_exercices
+ * @brief Solo cuenta asta 5 y lo muestra por pantalla
+**/
 void countFive()
 {
     // bucle for que cuenta de 1 a 5 //
