@@ -83,7 +83,6 @@ int main()
 **/
 void convertMap2(map<string, float> &mapa1)
 {
-
     // crea el iterador y recorre el mapa //
     for(map<string, float>::iterator it = mapa1.begin();it!=mapa1.end();it++)
     {
