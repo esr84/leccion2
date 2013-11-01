@@ -124,7 +124,7 @@ void convertMap2(map<string, float> &mapa1)
         // redondeamos el float //
         it.second = round(it.second);
         // cambiamos el texto por yeah! //
-        it.first.assign("yeah!");
+        const_cast<map<string, float>::key_type &>(it.first) = it.first + "yeah!";
     }
 }
 

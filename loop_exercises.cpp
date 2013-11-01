@@ -83,14 +83,13 @@ int main()
 **/
 void convertMap2(map<string, float> &mapa1)
 {
-
     // crea el iterador y recorre el mapa //
     for(map<string, float>::iterator it = mapa1.begin();it!=mapa1.end();it++)
     {
         // redondea el float//
-        it->second = round(it->second);
-        // cambia el valor del string //
-        it->first.assign("yeah!");
+    	it->second = round(it->second);
+    	// cambia el valor del string //
+    	const_cast<map<string, float>::key_type &>(it->first) = it->first + "yeah!";
     }
 }
 
